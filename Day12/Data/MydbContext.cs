@@ -11,6 +11,12 @@ namespace Day12.Data
 
         }   
         public DbSet<Student> Students { get; set; }
+        public DbSet<AddProducts> AddProducts { get; set; }
+        public DbSet<BuyProduct> BuyProducts { get; set; }
+        public DbSet<ApproveList> ApproveLists { get; set; }
 
-     }
+        public DbSet<Feedback1> Feedback1s { get; set; }
+
+
+    }
 }

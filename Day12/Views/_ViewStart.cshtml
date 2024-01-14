@@ -1,3 +1,47 @@
-﻿@{
+﻿@* @{
     Layout = "_Layout";
+} *@
+
+
+@* @{
+    if (User.IsInRole("Supplier"))
+    {
+        Layout = "/Views/Shared/_SupplierLayout.cshtml";
+    }
+    else if (User.IsInRole("Buyer"))
+    {
+        Layout = "/Views/Shared/_BuyerLayout.cshtml";
+    }
+    else
+    {
+        // Default layout
+        Layout = "/Views/Shared/_Layout.cshtml";
+    }
 }
+ *@
+
+
+
+@{
+    if (User.IsInRole("Supplier"))
+    {
+        Layout = "/Views/Shared/_SupplierLayout.cshtml";
+    }
+    else if (User.IsInRole("Investor"))
+    {
+        Layout = "/Views/Shared/_InvestorLayout.cshtml";
+    }
+    else if (User.IsInRole("Buyer"))
+    {
+        Layout = "/Views/Shared/_BuyerLayout.cshtml";
+    }
+    else if (User.IsInRole("Admin"))
+    {
+        Layout = "/Views/Shared/_AdminLayout.cshtml";
+    }
+    else
+    {
+        // Default layout
+        Layout = "/Views/Shared/_Layout.cshtml";
+    }
+} 
